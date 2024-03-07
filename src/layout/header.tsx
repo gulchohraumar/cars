@@ -51,106 +51,66 @@ export default function Header() {
                     </div>
 
                     <div id='contentTabs' className="contentTabs px-3 d-flex flex-row" style={{ overflowX: 'auto', overflowY: 'hidden' }}>
-                        {/* {
-                            indexTab == 1 ?
-                                <div id='tabIndex1' className='bg-danger' style={{transform: 'translate(118%, 0)'}} >
-                                    <div className="col-lg-12">
-                                        <div className="field">
-                                            <label htmlFor="name" title="Name" data-title="Name"></label>
-                                            <input type="text" name='name' id='name' />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="field">
-                                            <label htmlFor="name" title="Name" data-title="Name"></label>
-                                            <input type="text" name='name' id='name' />
-                                        </div>
-                                    </div>
-                                </div>
-                                :
-                                <div id='tabIndex2' className='bg-warning'>
-                                    <div className="col-lg-12">
-                                        <div className="field">
-                                            <label htmlFor="name" title="Name" data-title="Name"></label>
-                                            <input type="text" name='name' id='name' />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="field">
-                                            <label htmlFor="name" title="Name" data-title="Name"></label>
-                                            <input type="text" name='name' id='name' />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="field">
-                                            <label htmlFor="name" title="Name" data-title="Name"></label>
-                                            <input type="text" name='name' id='name' />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="field">
-                                            <label htmlFor="name" title="Name" data-title="Name"></label>
-                                            <input type="text" name='name' id='name' />
-                                        </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                        <div className="field">
-                                            <label htmlFor="name" title="Name" data-title="Name"></label>
-                                            <input type="text" name='name' id='name' />
-                                        </div>
-                                    </div>
-                                </div>
-                        } */}
-
                         <div id='tabIndex1' className=' col-sm-12 me-4' style={{ width: '100%' }} >
-                            <div className="col-lg-12">
-                                <div className="field m-0 text-center">
-                                    <img src={require('../assets/footer-logo.jpg')} alt="" style={{ width: '120px' }} />
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="field m-0 text-center">
+                                        <img src={require('../assets/footer-logo.jpg')} alt="" style={{ width: '120px' }} />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-lg-12">
-                                <div className="field">
-                                    <label htmlFor="usernameLogin" title="Username" data-title="Username"></label>
-                                    <input type="text" placeholder='Username' name='usernameLogin' id='usernameLogin' />
+                            <div className="row">
+                                <div className="col-lg-12">
+                                    <div className="field">
+                                        <label htmlFor="usernameLogin" title="Username" data-title="Username"></label>
+                                        <input type="text" placeholder='Username' name='usernameLogin' id='usernameLogin' />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col-lg-12">
-                                <div className="field">
-                                    <label htmlFor="passwordLogin" title="Password" data-title="Password"></label>
-                                    <input type="password" placeholder='Password' name='passwordLogin' id='passwordLogin' />
+                                <div className="col-lg-12">
+                                    <div className="field">
+                                        <label htmlFor="passwordLogin" title="Password" data-title="Password"></label>
+                                        <input type="password" placeholder='Password' name='passwordLogin' id='passwordLogin' />
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div id='tabIndex2' className=' col-sm-12' style={{ width: '100%' }}>
-                            <div className="col-lg-12">
-                                <div className="field">
-                                    <label htmlFor="name" title="Name" data-title="Name"></label>
-                                    <input type="text" name='name' placeholder='Name' id='name' />
+                            <div className="row p-0">
+                                <div className="col-lg-6">
+                                    <div className="field">
+                                        <label htmlFor="name" title="Name" data-title="Name"></label>
+                                        <input type="text" name='name' placeholder='Name' id='name' />
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="field">
+                                        <label htmlFor="surname" title="Surname" data-title="Surname"></label>
+                                        <input type="text" name='surname' placeholder='Surname' id='surname' />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-lg-12">
-                                <div className="field">
-                                    <label htmlFor="surname" title="Surname" data-title="Surname"></label>
-                                    <input type="text" name='surname' placeholder='Surname' id='surname' />
+                            <div className="row p-0">
+                                <div className="col-lg-6">
+                                    <div className="field">
+                                        <label htmlFor="email" title="Email" data-title="Email"></label>
+                                        <input type="email" name='email' placeholder='Email' id='email' />
+                                    </div>
+                                </div>
+                                <div className="col-lg-6">
+                                    <div className="field">
+                                        <label htmlFor="username" title="Username" data-title="Username"></label>
+                                        <input type="text" name='username' placeholder='Username' id='username' />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="col-lg-12">
-                                <div className="field">
-                                    <label htmlFor="email" title="Email" data-title="Email"></label>
-                                    <input type="email" name='email' placeholder='Email' id='email' />
-                                </div>
-                            </div>
-                            <div className="col-lg-12">
-                                <div className="field">
-                                    <label htmlFor="username" title="Username" data-title="Username"></label>
-                                    <input type="text" name='username' placeholder='Username' id='username' />
-                                </div>
-                            </div>
-                            <div className="col-lg-12">
-                                <div className="field">
-                                    <label htmlFor="password" title="Password" data-title="Password"></label>
-                                    <input type="password" name='password' placeholder='Password' id='password' />
+
+                            <div className="row p-0">
+                                <div className="col-lg-6">
+                                    <div className="field">
+                                        <label htmlFor="password" title="Password" data-title="Password"></label>
+                                        <input type="password" name='password' placeholder='Password' id='password' />
+                                    </div>
                                 </div>
                             </div>
                         </div>

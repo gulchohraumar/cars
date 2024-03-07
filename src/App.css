@@ -88,8 +88,7 @@
     width: 25%;
     left: 14%;
     top: 15%;
-    height: 450px;
-    height: 450px;
+    height: 350px;
     overflow-x: hidden;
     overflow-y: auto;
     border-radius: 10px;
@@ -255,7 +254,7 @@
 
 .field {
     position: relative;
-    margin: 20px 0;
+    margin: 10px 0;
 
     input,
     select,
