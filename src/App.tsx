@@ -6,7 +6,7 @@ import CarItem, { CartContext } from './components/car-item';
 import Navbar, { CartCountContext } from './layout/navbar';
 import Main from './layout/main';
 import Cart from './layout/cart';
-
+import Login from './auth/login';
 
 function App() {
   const [data, setData] = useState([]);
@@ -28,7 +28,7 @@ function App() {
   return (
     <CartContext.Provider value={{ data, setData }}>
       <CartCountContext.Provider value={0}>
-        <div style={{ position: 'relative', overflowX: 'hidden', overflowY: 'auto', height: '100vh' }}>
+        <div className='h-full' style={{ position: 'relative', overflow: 'hidden'}}>
           <div id="cart" className="p-0 bg-white cart-con ">
             <div className="d-flex justify-content-between align-items-center p-2" style={{ borderBottom: '1px solid #dedede', height: '8vh' }}>
               <span className="close-btn-cart" onClick={() => handleOpenCart()}>
@@ -51,9 +51,10 @@ function App() {
             </ul>
           </div>
 
-          <div style={{ position: 'relative', overflowX: 'hidden', overflowY: 'auto', height: '100vh' }}>
+          <div className='h-full' style={{ position: 'relative', overflowX: 'hidden', overflowY: 'auto' }}>
             <Routes >
               <Route path='/' element={<Layout cartCount={data.length} />}></Route>
+              <Route path='/login' element={<Login />}></Route>
               <Route path='/main' element={<Main cartCount={data.length} />}>
                 <Route path='car/:id' element={<CarItem />}></Route>
               </Route>

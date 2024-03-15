@@ -2,6 +2,10 @@
 
 @import './assets/Fontawesome-V6-Pro-main/assets/css/all.min.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   scroll-behavior: smooth
@@ -28,10 +32,11 @@ body {
   color: #85848e;
 }
 
-.header-porsch { 
+.header-porsch {
   width: 45%;
   position: inherit;
   right: 0;
+  top: 20%;
 }
 
 ul {
@@ -46,12 +51,12 @@ ul {
 }
 
 .nav-container {
-  height: 50px;
+  /* height: 50px; */
   padding-top: 10px;
   align-items: center;
 }
 
-.nav-container li {
+.nav-container-li {
   font-weight: 500;
   font-size: 17px;
   color: #85848e;
@@ -62,7 +67,7 @@ ul {
 }
 
 .nav-container li a {
-  text-decoration: none;
+  text-decoration: none; 
   cursor: pointer;
   display: inline-block;
   width: 100%;
@@ -70,7 +75,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 19px;
+  font-size: 16px;
 }
 
 .nav-container li a path {
@@ -78,13 +83,53 @@ ul {
 }
 
 .nav-con {
-  background-color: #e6e6e6;
+  background-color: #fefefe;
+  box-shadow: 0 4px 20px #95959526;
   position: sticky;
   z-index: 2;
   top: 0;
+  height: 9vh;
   width: 100%;
 }
 
-.section-header{
-  font-size: 55px; 
+.section-header {
+  font-size: 55px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* product details page style */
+p.title {
+  font-size: 28px;
+  color: #bc4141;
+}
+
+p.desc {
+  color: #777;
+  font-size: 13px;
+}
+
+.options {
+  border-top: 1px solid #eee;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.add-cart p {
+  font-size: 28px;
+  color: #444;
+  margin-right: 15px;
 }
