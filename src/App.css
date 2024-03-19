@@ -117,6 +117,7 @@
     background-color: #fdfdfd;
     box-shadow: rgb(156 156 156 / 20%) 0px 2px 20px 0px;
 }
+
 .contentTabs::-webkit-scrollbar {
     width: 7px;
     height: 8px;
@@ -136,33 +137,68 @@
 .tab-header {
     border: none;
     padding: 10px;
-    color: #fff;
+    color: #ff8530;
     transition: 0.5s;
-    background-color: #f88d4fc4;
-    border: 1px solid #f88d4fc4;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-bottom: 1px solid #f88d4fc4;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    background: transparent;
+
+}
+
+.tab-header i {
+    color: #ff8530;
 }
 
 .active-tab-header {
     /* border-radius: 10px; */
-    box-shadow: inset rgb(0 0 0 / 15%) 0px 3px 8px, inset rgb(0 0 0 / 15%) 0px -3px 8px;
+    color: #fff;
+    background: #ff8530;
+}
 
+.active-tab-header i {
+    color: #fff;
 }
 
 .login-button {
     text-align: center;
     border: none;
-    padding: 10px;
+    padding: 7px;
     border-radius: 8px;
     text-align: center;
     font-weight: 600;
     font-size: 17px;
-    color: #f88d4fc4;
+    color: #fff;
     transition: 0.5s;
-    background-color: #fff0e8c4;
-    border: 1px solid #f88d4fc4;
+    background-color: #ff8530;
+    border: 1px solid #ff8530;
     /* box-shadow: inset 0 0 42px #fa6d1b; */
+}
+
+.left-tab {
+    animation: leftAnimation 1s;
+    left: 100%;
+    transform: translateX(-100%);
+}
+
+@keyframes leftAnimation {
+    0% {
+        transform: translateX(0);
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+        transform: translateX(-100%);
+    }
+}
+
+.right-tab {
+    transform: translateX(calc(100vw + 100%));
+}
+
+.tab-content {
+    transition: 1s;
 }
 
 .cart-con {
@@ -299,10 +335,12 @@
         border-radius: 10px;
         border: 1px solid #D9D9D9;
         background: #FFF;
+
         &:focus {
             outline: 0;
             border-color: #ff8530;
         }
+
         &:focus+label::before {
             color: #136481;
             border-color: #136481;
